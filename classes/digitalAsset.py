@@ -1,14 +1,12 @@
 from abc import ABC, abstractmethod
-from datetime import time
 
 
 class DigitalAsset(ABC):
 
-    def __init__(self):
-        self.__name = "moti"
-        self.__registration_date = time()
-        self.__cost = 100.50
-
+    def __init__(self, name, registration_date, cost):
+        self.__name = name
+        self.__registration_date = registration_date
+        self.__cost = cost
     @property
     def get_information(self):
         return self.__name, self.__cost, self.__registration_date
